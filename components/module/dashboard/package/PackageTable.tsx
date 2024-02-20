@@ -81,7 +81,7 @@ const PackageTable = () => {
 
   const handleDelete = async (data: any) => {
     await deleteData(data._id);
-    getData().then((res) => setDatas(res));
+    getData(user.id).then((res) => setDatas(res));
   };
 
   return (
