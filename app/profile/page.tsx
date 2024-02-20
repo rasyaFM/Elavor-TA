@@ -62,8 +62,18 @@ const Page = () => {
               Email
             </label>
             <h3 className="mb-2 italic">{userProfile?.email}</h3>
+            <label typeof="Phone" className="mb-2">
+              Phone Number
+            </label>
+            <h3 className="mb-2">{userProfile?.phone}</h3>
+            <label typeof="Address" className="mb-2">
+              Address
+            </label>
+            <h3 className="mb-2">{userProfile?.address}</h3>
           </form>
           <button
+            type="button"
+            className="btn btn-primary btn-outline justify-self-end"
             onClick={() =>
               (
                 document?.getElementById("edit_user_modal") as HTMLDialogElement

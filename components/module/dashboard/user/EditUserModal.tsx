@@ -73,7 +73,7 @@ const EditUserModal = (props: TProps) => {
             <X size={18} />
           </button>
         </div>
-        <h5 className="text-center mb-4 mt-[-15px] font-medium text-xl text-second">
+        <h5 className="text-center mb-4 mt-[-15px] font-medium text-xl text-primary">
           Edit User Data
         </h5>
         <form
@@ -82,72 +82,40 @@ const EditUserModal = (props: TProps) => {
           method="dialog"
         >
           <input
-            className="input input-bordered input-md w-full mt-2"
-            type="nameUser"
+            className="input input-bordered input-md w-full mt-2 hover:border-fourth"
+            type="name"
             placeholder="name"
             value={name}
             disabled={creatingUser}
             onChange={(ev) => setName(ev.target.value)}
           />
           <input
-            className="input input-bordered input-md w-full mt-2"
+            className="input input-bordered input-md w-full mt-2 disabled bg-slate-300"
             type="emailUser"
             placeholder="email"
             value={email}
-            disabled={creatingUser}
-            onChange={(ev) => setEmail(ev.target.value)}
           />
           <input
-            className="input input-bordered input-md w-full mt-2"
-            type="passwordUser"
+            className="input input-bordered input-md w-full mt-2 hover:border-fourth"
+            type="password"
             placeholder="password"
             value={newPassword}
             disabled={creatingUser}
             onChange={(ev) => setNewPassword(ev.target.value)}
           />
-          <div className="dropdown dropdown-hover text-second">
-            <div className="flex items-center gap-3">
-              <h4 className="mt-1">role : </h4>
-              <div tabIndex={0} role="button" className="btn btn-xs mt-2">
-                {role}
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <button
-                  className="btn btn-sm btn-ghost"
-                  onClick={() => setRole("klien")}
-                >
-                  klien
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-sm btn-ghost"
-                  onClick={() => setRole("organizer")}
-                >
-                  organizer
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-sm btn-ghost"
-                  onClick={() => setRole("admin")}
-                >
-                  admin
-                </button>
-              </li>
-            </ul>
-          </div>
+          <input
+            className="input input-bordered input-md w-full mt-2 disabled bg-slate-300"
+            type="role"
+            placeholder="role"
+            value={role}
+            disabled={creatingUser}
+          />
           <button
             type="button"
             className="w-fit p-0 border-0 mx-auto"
             onClick={() => setOptional((prev) => !prev)}
           >
-            <div className="flex items-center gap-1 font-medium text-sm">
+            <div className="flex items-center gap-1 font-medium text-sm mt-3">
               optional{" "}
               {optional ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
             </div>
@@ -155,16 +123,16 @@ const EditUserModal = (props: TProps) => {
           {optional && (
             <div className="mt-2">
               <input
-                className="input input-bordered input-md w-full mt-2"
-                type="text"
+                className="input input-bordered input-md w-full mt-2 hover:border-fourth"
+                type="address"
                 placeholder="address"
                 value={address}
                 disabled={creatingUser}
                 onChange={(ev) => setAddress(ev.target.value)}
               />
               <input
-                className="input input-bordered input-md w-full mt-2"
-                type="text"
+                className="input input-bordered input-md w-full mt-2 hover:border-fourth"
+                type="phone"
                 placeholder="phone"
                 value={phone}
                 disabled={creatingUser}

@@ -36,11 +36,7 @@ input[type="numberItems"] {
   margin-top: -2px;
 }
 
-input[type="nameUser"],
-input[type="emailUser"],
-input[type="passwordUser"],
-input[type="addressUser"],
-input[type="phoneUser"] {
+input[type="emailUser"]{
   @apply text-gray-500 text-sm leading-tight;
   margin-top: 5px;
 }
