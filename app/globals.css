@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section.hero {
+  @apply block md:grid;
+  grid-template-columns: 0.6fr 0.6fr;
+}
+
+section.profile{
+  @apply grid grid-cols-3;
+  grid-template-columns: 0.6fr 0.1fr 0.6fr;
+}
+
+.recPack {
+  @apply block;
+}
+
+.footer {
+  @apply block md:grid;
+}
+
+.footer-items {
+  @apply block px-20 md:grid;
+  @apply mt-5;
+}
+
+label {
+  @apply text-gray-500 text-sm leading-tight;
+}
+input[type="namePack"],
+input[type="pricePack"],
+input[type="filePack"],
+input[type="nameItems"],
+input[type="numberItems"] {
+  margin-top: -2px;
+}
+
+input[type="nameUser"],
+input[type="emailUser"],
+input[type="passwordUser"],
+input[type="addressUser"],
+input[type="phoneUser"] {
+  @apply text-gray-500 text-sm leading-tight;
+  margin-top: 5px;
+}
+
+input[type="search"] {
+  @apply w-full p-2 text-sm pl-5 bg-second;
+}
+
+input[type="nameReg"],
+input[type="email"],
+input[type="name"], 
+input[type="phone"],
+input[type="address"] {
+  @apply w-full rounded-md mt-2 p-2 bg-second border-2 border-primary;
+}
+
+input[type="password"] {
+  @apply w-full rounded-md mt-2 p-2 bg-second border-2 border-primary;
+}
+
+button,
+.button {
+  @apply flex w-full justify-center gap-2 text-gray-700 font-semibold;
+  @apply border border-gray-300 rounded-xl px-6 py-2;
+}
+button[type="submit"],
+.submit,
+button.primary {
+  @apply border-primary bg-primary text-white;
+}
+button[type="submit"]:disabled,
+.submit:disabled {
+  @apply cursor-not-allowed bg-red-400;
+}
+.swiper_container {
+  @apply flex justify-center;
+  
+}
+
+.footer-subtitle{
+  @apply text-sm text-black;  
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
