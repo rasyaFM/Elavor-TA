@@ -30,15 +30,10 @@ const getData = async () => {
 
 export default function RecPack() {
     const [data, setData] = useState([]);
-    const [initialSlide, setInitialSlide] = useState(0);
 
     useEffect(() => {
       getData().then((res) => {
         setData(res);
-        const index = res.findIndex((data:any) => data._id === 3);
-        if (index !== -1) {
-            setInitialSlide(index);
-        }
         })
     }, []);
     return (
@@ -48,7 +43,6 @@ export default function RecPack() {
             mainHeader={"Recommended"}
             />
             <Swiper
-                initialSlide={initialSlide}
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
