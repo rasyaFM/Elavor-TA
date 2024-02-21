@@ -48,21 +48,6 @@ export function MainNav() {
             </Link>
           </NavigationMenuItem>
           {OnlyAdmin()}
-
-          {/* <NavigationMenuItem>
-            <NavigationMenuTrigger>Server Side</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/Package" title="Package">
-                  Protecting React Server Component.
-                </ListItem>
-                <ListItem href="/middleware-example" title="Middleware Example">
-                  Using Middleware to protect pages & APIs.
-                </ListItem>
-                
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
     </div>
