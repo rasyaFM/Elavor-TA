@@ -1,6 +1,6 @@
 "use client";
 
-import EditUserModal from "@/components/module/dashboard/user/EditUserModal";
+import EditProfileModal from "@/components/module/profile/EditProfileModal";
 import SectionHeaders from "@/components/sectionHeaders";
 import { rupiah } from "@/lib/utils";
 import { useSession } from "next-auth/react";
@@ -142,7 +142,7 @@ const Page = () => {
         </>
       )}
       {userProfile && (
-        <EditUserModal
+        <EditProfileModal
           data={userProfile}
           success={() =>
             getUser(session.data?.user?.id ?? "").then((res) =>

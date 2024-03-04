@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col justify-between w-full h-full min-h-screen">
+        <div className="background flex flex-col justify-between w-full h-full min-h-screen">
           <Header />
           <main className="flex-auto w-full max-w-6xl p-6 mx-auto">
             <SessionProvider session={session}>{children}</SessionProvider>

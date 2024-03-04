@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.background{
+  background-image: url("/images/background.jpg");
+}
+
+
 section.hero {
   @apply block md:grid;
   grid-template-columns: 0.6fr 0.6fr;
@@ -47,7 +52,8 @@ input[type="search"] {
 
 input[type="nameReg"],
 input[type="email"],
-input[type="name"], 
+input[type="name"],
+input[type="role"], 
 input[type="phone"],
 input[type="address"] {
   @apply w-full rounded-md mt-2 p-2 bg-second border-2 border-primary;

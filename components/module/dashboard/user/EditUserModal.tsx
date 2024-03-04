@@ -103,13 +103,37 @@ const EditUserModal = (props: TProps) => {
             disabled={creatingUser}
             onChange={(ev) => setNewPassword(ev.target.value)}
           />
-          <input
-            className="input input-bordered input-md w-full mt-2 disabled bg-slate-300"
-            type="role"
-            placeholder="role"
-            value={role}
-            disabled={creatingUser}
-          />
+          <div className="dropdown dropdown-hover text-second w-full">
+            <input
+              className="input input-bordered input-md w-full mt-2 "
+              type="role"
+              placeholder="role"
+              value={role}
+              disabled={creatingUser}
+              onChange={(ev) => setRole(ev.target.value)}
+            />
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <button
+                  className="btn btn-sm btn-ghost"
+                  onClick={() => setRole("klien")}
+                >
+                  klien
+                </button>
+              </li>
+              <li>
+                <button
+                  className="btn btn-sm btn-ghost"
+                  onClick={() => setRole("organizer")}
+                >
+                  organizer
+                </button>
+              </li>
+            </ul>
+        </div>
           <button
             type="button"
             className="w-fit p-0 border-0 mx-auto"

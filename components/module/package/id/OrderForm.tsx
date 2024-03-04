@@ -367,6 +367,7 @@ const OrderForm = (props: TProps) => {
           <div className="flex items-center w-full gap-2 mt-5">
             <h3>Choose the number of payments</h3>
             <select
+              title="Number of Payment Options"
               value={numberOfPayment}
               onChange={(e) => setNumberOfPayment(Number(e.target.value))}
               className="select select-sm select-bordered"

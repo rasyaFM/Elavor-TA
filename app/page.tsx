@@ -147,7 +147,7 @@ export default function Index() {
   };
 
   return (
-    <div className="space-y-5">
+    <div className=" space-y-5">
       <Hero />
       <RecPack />
       <section className="text-center my-5">
